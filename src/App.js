@@ -15,7 +15,11 @@ const App = () => {
       </Switch>
       <Switch>
         <Route exact patch="/man" component={Man}/>
+      </Switch>
+      <Switch>
         <Route exact patch="/woman" component={Woman}/>
+      </Switch>
+      <Switch>
         <Route exact patch="/search" component={Search}/>
       </Switch>
 
