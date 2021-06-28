@@ -1,15 +1,27 @@
 import React from 'react'
-import Container from './Components/Container'
-import Footer from './Components/Footer'
-import Header from './Components/Header'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Login from './Login/Login';
+import Man from './Pages/Man';
+import Search from './Pages/Search';
+import Woman from './Pages/Woman';
+import Navbar from './Navbar/Navbar';
 
 const App = () => {
   return (
-    <div>
-      <Header />
-      <Container />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Switch>
+        <Route exact path="/Login" component={Login}/>
+      </Switch>
+      <Switch>
+        <Route exact patch="/man" component={Man}/>
+        <Route exact patch="/woman" component={Woman}/>
+        <Route exact patch="/search" component={Search}/>
+      </Switch>
+
+
+
+    </BrowserRouter>
   )
 }
 
